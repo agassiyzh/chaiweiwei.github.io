@@ -4,7 +4,7 @@ title:  "Autolayout Animation"
 date:   2015-12-03 12:03:14
 categories: jekyll update
 ---
-![setting](../images/search_animation.gif)
+![setting]({{ site.url }}/assets/search_animation.gif)
 
 我一直都感觉动画是我的一个薄弱点，因为现在都是用Autolayout来布局，要做动画之前的方式使用frame已经不生效了，现在在做国家攻略的时候要做一个随着scrollerView滑动，搜索栏变形的动画，如果需要pop动画的话是可以用 `POP`做，但是我感觉从椭圆变形成圆形，原点不变，就是frame的width在变化，没有必要用pop，之前在尝试利用Autolayout做动画一直失败的原因是，无论我怎么变化约束，对象view都不变化，这次终于成功了，也找到了我一直以来的问题，先上代码：
 
