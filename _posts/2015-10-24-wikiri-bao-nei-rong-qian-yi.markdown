@@ -209,7 +209,7 @@ categories: "日报"
 
 今天圆满结束，论文就差摘要的英文翻译了，回家fighting！
 
-![setting](../images/mou.png)
+![setting](/assets/mou.png)
 
 ###2015年3月24日 周二 日报
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Dec 2015 16:19:06 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Dec 2015 16:19:06 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Dec 2015 16:27:37 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Dec 2015 16:27:37 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -118,7 +118,7 @@ self.navigationItem.title = @&quot;Title for NavigationBar&quot;;
     
       <item>
         <title>Autolayout Animation</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://yourdomain.com/assets/search_animation.gif&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/search_animation.gif&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;我一直都感觉动画是我的一个薄弱点，因为现在都是用Autolayout来布局，要做动画之前的方式使用frame已经不生效了，现在在做国家攻略的时候要做一个随着scrollerView滑动，搜索栏变形的动画，如果需要pop动画的话是可以用 &lt;code&gt;POP&lt;/code&gt;做，但是我感觉从椭圆变形成圆形，原点不变，就是frame的width在变化，没有必要用pop，之前在尝试利用Autolayout做动画一直失败的原因是，无论我怎么变化约束，对象view都不变化，这次终于成功了，也找到了我一直以来的问题，先上代码：&lt;/p&gt;
 
@@ -385,7 +385,7 @@ self.navigationItem.title = @&quot;Title for NavigationBar&quot;;
 
 &lt;p&gt;今天圆满结束，论文就差摘要的英文翻译了，回家fighting！&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/mou.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/mou.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-16&quot;&gt;2015年3月24日 周二 日报&lt;/h3&gt;
 
@@ -1074,7 +1074,7 @@ setModalPresentationStyle:设置模态视图弹出关闭动画，但是我感觉
 
 &lt;!--more--&gt;
 
-&lt;p&gt;我在修设计效果的时候，重新思考了怎么实现图片和文字的组合展示效果，之前看到有关联的左图片与右问题的时候，一定使用UIButton系统提供的image和title来实现，当看到右图片、左文字&lt;img src=&quot;../images/more_icon.png&quot; alt=&quot;setting&quot; /&gt;的时候心里还是有点小犹豫的，每次用ImageEdgeInsets或者TitleEdgeInsets属性的时候位置都不正确，我通常都是用最笨的办法，将image独立出来，再做一个UIImageView，这次有时间就好好的搜了一下这个解决方案，其实还是我UIEdgeInsetsMake的时候没有算好，总是差image的一个宽度。下面是能实现效果的一个方案：&lt;/p&gt;
+&lt;p&gt;我在修设计效果的时候，重新思考了怎么实现图片和文字的组合展示效果，之前看到有关联的左图片与右问题的时候，一定使用UIButton系统提供的image和title来实现，当看到右图片、左文字&lt;img src=&quot;/assets/more_icon.png&quot; alt=&quot;setting&quot; /&gt;的时候心里还是有点小犹豫的，每次用ImageEdgeInsets或者TitleEdgeInsets属性的时候位置都不正确，我通常都是用最笨的办法，将image独立出来，再做一个UIImageView，这次有时间就好好的搜了一下这个解决方案，其实还是我UIEdgeInsetsMake的时候没有算好，总是差image的一个宽度。下面是能实现效果的一个方案：&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;
 //图片20px 20px
@@ -1142,7 +1142,7 @@ animation2.duration = 0.5;
 
 &lt;p&gt;攻略app在6plus上一直有一个bug,UIRefreshControl在6plus大屏上endRefreshing不会隐藏掉，x需要轻轻的再下来一次，才可以，这样会有体验上的隐患，可能会挡住第一个cell内容，点击会没有响应，所以想说可以用第三方的RefreshControl，其中MJRefresh的第三方能添加一个刷新动画，加入我们求攻略的logo什么的，以为之前用到UIRefreshControl还挺多的，所以还是希望下次有刷新的展示效果需求的时候就选择用MJRefresh的看看。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/refresh.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/refresh.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 01 Sep 2015 15:21:57 +0800</pubDate>
@@ -1166,18 +1166,18 @@ animation2.duration = 0.5;
 
 &lt;p&gt;之前在求攻略原有项目上进行新的第三方添加和使用都没有问题，安装流程是OK的，这里要注意的是当我自己创建好项目后，在原有的viewController上import头文件没有报：can not found的问题，但是当我新建控制器，并import第三方头文件的时候发现会一直报这个错误，后来也是巧合啊，我就是偏不信，之前还没有发现与“原有和新建”上的关系，多次的创建新的项目，当我发现只有在viewController上引用才是OK的时候，回头一看文件的勾选关联target上，viewController没有关联tests,但是我在创建新控制器的时候因为我安装了一个AllTarget的插件，会默认全部钩上，单纯的我没想那么多啊，就按下一步确定了，导致了后来为了找这个问题花了好多的时间。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/target.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/target.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;当我勾选掉新创建控制器与tests的关联的时候，pod中的文件就能正确的时候了。
 这是为什么呢？在stackoverfloow中也能搜到蛮多类似的解决方案的，终极解决方案就如下图所示，在configuration中需要在tests中将None替换成pods，这样target不小心勾选上tests也不会出现这个问题了，想想也是厉害的，只是创建了一下项目就能遇到很多的问题：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/setting.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/setting.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2.Pch file&lt;/p&gt;
 
 &lt;p&gt;我记得我学习iOS的时候用的Xcode5版本，当时也是比较喜欢将一下常用的头文件导入到pch文件中，但是后来发现Xcode6就不自动创建了，说是影响build的时间，但是这样编码便利性就低了一点，一开始只有少文件的时候直接在要使用的文件中import需要的就好了，但是慢慢文件多了，重复的import写多了也是烦躁的，所以还是果断自己添加了，这里除了添加pch文件，还需要配置，这样项目才会在build的时候也去编译pch中导入的常用文件：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/pch.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/pch.png&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;添加的选项格式为: “$(SRCROOT)/项目名称/pch文件名”&lt;/p&gt;
 

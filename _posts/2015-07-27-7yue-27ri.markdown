@@ -43,7 +43,7 @@ extra:
 
 2. 宏
 target的宏设置的位置在build setting中，找到如下位置：
-![setting](../images/build_setting.png)
+![setting](/assets/build_setting.png)
 
 在使用的时候使用`#if 宏名称  #endif`来描述就OK啦，想想真是美好啊但是if elseif 的数量太多也是揪心的。
 
