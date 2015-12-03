@@ -1,35 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
+    <title>chaiweiwei&#39;s blog</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Dec 2015 12:07:17 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Dec 2015 12:07:17 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Dec 2015 15:51:38 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Dec 2015 15:51:38 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>otocpress放弃  Jekyll跟上</title>
+        <description>&lt;h3 id=&quot;otocpress-&quot;&gt;otocpress 填坑&lt;/h3&gt;
+&lt;p&gt;之前blog关闭了一段时间，一位otocpress搭建的环境坏了，一直generate 失败，多少有点打击积极性的，后来一直在写还是不写中纠结，前几天一直在网上搜罗修复问题，因为mac系统升级EI，有一些环境需要更新，这边有一个比较大，也是经常出现的问题，因为网上能搜罗到（哈哈哈）：&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;1.octopress Errno::ENOENT: No such file or directory - compass:
+这个问题找了好久，我这边问题出现的原因是ruby需要更新成2.2.3，&lt;code&gt;ruby --v&lt;/code&gt;显示仍然是2.2.0&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;解决方案：&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;brew update
+rvm install ruby-2.2.3
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;重新查看&lt;code&gt;ruby --version&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-darwin14]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这里提供了一个&lt;a href=&quot;http://schalkneethling.github.io/blog/2015/10/16/errno-enoent-no-such-file-or-directory-jekyll-octopress-el-capitan/&quot;&gt;参考链接&lt;/a&gt;但是它提供的参考命令我这边部分没有效果，都是一点点折腾。&lt;/p&gt;
+
+&lt;p&gt;当&lt;code&gt;rake generate&lt;/code&gt;成功后好兴奋啊，&lt;code&gt;rake preview&lt;/code&gt;查看本地4000，完美，但是一个坑又来了，当我导入之前写的blog的时候，出现了一个大bug，导致我之后还是选择Jeklly：&lt;/p&gt;
+
+&lt;p&gt;2.Pygments can’t parse unknown language:&lt;/p&gt;
+
+&lt;p&gt;有的人说是因为python要更新成3.5最新，有的人说当python版本是3.＊的时候会出现这个问题，要将python降成2.＊,反正就是有各种的问题，导致我的otocpress环境还是搭建不成功，不知道是这几天的杭州雾霾还是因为要修复blog让我头重脚轻的。&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;Jekyll环境搭建&lt;/h3&gt;
+
+&lt;p&gt;Jekyll安装起来是很简单的，但是当我将源文件上传github的时候，发现&lt;code&gt;Jekyll preview&lt;/code&gt;预览时OK的，但是http://chaiwiewei.github.io总是404，当我仔细检查提交记录的时候发现就是没有index.html文件，没有首页。真的好奇怪，一直没有找到原因，我用了sourcetree工具也试了，命令的方式 &lt;code&gt;git add&lt;/code&gt;也试了，index.html在目录下就是不能提交上，像一个幽灵文件一下，好吧，一定要强制add &lt;code&gt;git add -f index.html&lt;/code&gt;,结局是好的，就是不知道是什么原因引起的。现在正在紧锣密鼓的将记录在本地的问题整理到blog上呢。。。。。。&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Dec 2015 22:02:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/03/otocpressfangqi-Jekyllgengshang.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/03/otocpressfangqi-Jekyllgengshang.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Translucent TabBar</title>
+        <description>&lt;p&gt;在修改tabbar icon的时候发现之前tabbar在translucent上的一个bug，现在新的icon底色是白色的，之前还能不理会这个问题，看上去问题不到，现在是白色的底色，问题就被放大了，在反复检查下发现是因为UITabBar的&lt;code&gt;translucent&lt;/code&gt;属性造成的，现在当我将值设置为NO的时候，是能完美的解决icon的问题但是会造成一个比较严重的问题，因为app中有几个viewcontroller有&lt;code&gt;滑动动作tabbar展示的动画&lt;/code&gt;，可以测试一下，当translucent=NO时，viewcontroller滑动，tabbar向下缩的时候会造成tabbar位置变成黑色背景了，tableView没有自动布局到地步，解决方案是&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+viewController.extendedLayoutIncludesOpaqueBars = YES;
+viewController.edgesForExtendedLayout = UIRectEdgeBottom;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;属性&lt;code&gt;extendedLayoutIncludesOpaqueBars&lt;/code&gt;可以从字面上翻译成延伸不仅包括透明的bar，我在&lt;a href=&quot;http://stackoverflow.com/questions/20979281/ios-7-tabbar-translucent-issue&quot;&gt;参考链接&lt;/a&gt;中看到一句话：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+This happens in iOS7 when you set tabBar.translucent to NO. iOS is trying to be smart and say &quot;hey the tabbar is not translucent so we better push everything up on top of it&quot;. Fix it by setting the extendedLayoutIncludesOpaqueBars property of the view controller inside the navigation controller which is inside the tabbar controller to YES.
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;翻译成:&lt;/p&gt;
+
+&lt;p&gt;这样的情况会发生在iOS7中，当设置tabBar.translucent为NO, iOS试图自作聪明，认为这里的tabbar是不透明的，所以我们最好将所有的东西都推到顶部，修复这个问题是将在navigation controller中的view controller属性extendedLayoutIncludesOpaqueBars设置成YES&lt;/p&gt;
+
+&lt;p&gt;这样做就能将我们tabbar位置上黑色背景的问题修复好了。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Dec 2015 20:03:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/03/Translucent-TabBar.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/03/Translucent-TabBar.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Title的区别</title>
+        <description>&lt;h3 id=&quot;selftitle&quot;&gt;self.title&lt;/h3&gt;
+
+&lt;p&gt;重中之重，之前在学习的时候都没有发现这个小细节，self.navigationItem.title，self.tabBarItem.title，self.title的区别。一般设置nav Controller的title的时候就直接使用self.title，这是完全能满足需求的，但是随着app项目的“复杂”化，比如这里需要tabbar的title是“动态”，但是当前的nav controller的title钥匙“普吉岛”，我但是也没细想啊&lt;code&gt;self.title=@&quot;普吉岛&quot;&lt;/code&gt;不就好了，但是发现tabbar的title从动态也变成“普吉岛”，原来是因为：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+当self.navigationItem.title，self.tabBarItem.title没有赋值情况下值和self.title一致。
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;解决方案:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+self.title = @&quot;Title for TabBarItem&quot;; // TabBarItem.title inherits the viewController&#39;s self.title
+self.navigationItem.title = @&quot;Title for NavigationBar&quot;;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1540718/self-title-sets-navigationcontroller-and-tabbaritems-title-why&quot;&gt;参考链接&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Dec 2015 20:03:14 +0800</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2015/12/03/Title-qubie.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/03/Title-qubie.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Autolayout Animation</title>
+        <description>&lt;p&gt;&lt;img src=&quot;../images/search_animation.gif&quot; alt=&quot;setting&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我一直都感觉动画是我的一个薄弱点，因为现在都是用Autolayout来布局，要做动画之前的方式使用frame已经不生效了，现在在做国家攻略的时候要做一个随着scrollerView滑动，搜索栏变形的动画，如果需要pop动画的话是可以用 &lt;code&gt;POP&lt;/code&gt;做，但是我感觉从椭圆变形成圆形，原点不变，就是frame的width在变化，没有必要用pop，之前在尝试利用Autolayout做动画一直失败的原因是，无论我怎么变化约束，对象view都不变化，这次终于成功了，也找到了我一直以来的问题，先上代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objc&quot; data-lang=&quot;objc&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;searchButton&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;mas_updateConstraints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MASConstraintMaker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mas_equalTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt;     
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UIView&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;animateWithDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;animations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layoutIfNeeded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这个理解是通过update button的宽约束来做一个3s的动画，[self.view layoutIfNeeded];是一个重点，包含两个知识点:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Autolayout中容易混淆的地方：setNeedsLayout、layoutIfNeeded、layoutSubViews：&lt;a href=&quot;http://www.vienta.me/2015/05/18/AutoLayout-浅析动画（III）/&quot;&gt;很好的参考资料&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在autolayout下，主要是利用约束，动画的本质实际上是从一种约束状态变成另一种约束状态，从而来达到动画的目的。button转换过来的frame是相对于self.view，所以是self.view中有约束变化的时候，重新绘制自动布局。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;我之前的问题就是一直是以self.button为对象在更新约束的，现在想来都在做无用功。&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 03 Dec 2015 20:03:14 +0800</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/12/03/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/03/welcome-to-jekyll.html</guid>
+        <link>http://yourdomain.com/jekyll/update/2015/12/03/Autolayout_Animation.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/12/03/Autolayout_Animation.html</guid>
         
         
         <category>jekyll</category>
@@ -1135,193 +1251,6 @@ recognizerTap.cancelsTouchesInView = NO;
         <pubDate>Thu, 20 Aug 2015 10:42:14 +0800</pubDate>
         <link>http://yourdomain.com/2015/08/20/8yue-20ri-qi-xi.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2015/08/20/8yue-20ri-qi-xi.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>8月15号</title>
-        <description>&lt;p&gt;最近相比较之前是更新的快的，haha，最近因为项目上的新需求，花了1、2天调整和测试，是一个多功能的搜索页，结构看上去是简单的，主要还是要考虑到是在之前代码上补充的功能，所以要特别的注意代码的优化，还有就是用户的搜索历史纪录，因为搜索的逻辑不同了,要做好适配之前用户的搜索记录，这里有三个细节方面的小插曲：&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;一、UITableView’s style&lt;/p&gt;
-
-&lt;p&gt;增加的功能是在之前的SearchController中添加的，恰好我发现从父类中继承过来的tableview的style是plain，plain有一个特性，当表有headerView和footerView的时候，他们会在表向下滑动的时候当前section的headerView会挂住，footerView也是同理，这样就麻烦了，因为这次设计中搜索出来的类型有3到4个，如果出现挂住的体验，我感觉是不太好看的，而且加上tabbar的影响，下面会讲到，footview挂住的位置会在隐藏的tabbar之上，看上去体验不好，所以我思考下，就将headerView和footerView改成了Cell，这样做要注意row的加1和减1，因为数据数组的原因，这样就不用将plain类型改成group了，不在创建新tableview的情况下。&lt;/p&gt;
-
-&lt;p&gt;二、Tabbar和ToolBar&lt;/p&gt;
-
-&lt;p&gt;求攻略中跳转页面还是复杂的，但用户使用起来是方便的，这就苦了程序猿了，像之前blog中写的关于hidesBottomBarWhenPushed的内容，这次又遇到了隐藏tabbar的问题，因为tabbar在我点击搜索结果跳转的时候会在不该显示的时候显示，因为这次还是涉及到了三个以上的跳转层级，所以用了师傅之前的方法，在需要隐藏tabbar的页面直接&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-self.tabBarController.tabBar.hidden = YES
-&lt;/code&gt;
-一开始测试的时候发现还是能解决一部分的问题的，但是当我二次跳转到有ToolBar存在的poi内容的时候，发现ToolBar展示在离底部还有一个tabBar高度的地方，这下我就意识到tabBar.hidden 这样的方式和self.hidesBottomBarWhenPushed的区别了，所以要彻底解决这个问题,除了隐藏tabBar，还需要hidesBottomBarWhenPushed的配合，将BottomBar也隐藏了，不然会出现toolbar悬空的情况，因为这个搜索页在两个地方都出现了，但是push过来的materviewController不一样，一个有tabbar,一个没有，在第二个materviewController中不写hidesBottomBarWhenPushed时没有问题的，因为本来就是隐藏的，但是第一个materviewController不一样，我需要再做一个property，来做标记，这下能解决问题了，想到tabbar还是有点头疼呢。下面的国内博客对Tabbar和ToolBar描述还是仔细的。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-http://blog.csdn.net/duxinfeng2010/article/details/7707960
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;三、searchBar clear&lt;/p&gt;
-
-&lt;p&gt;在测试的时候发现几个搜索方面的体验不太好，主要是是clear的动作不好隐藏键盘，在网上有解决方案，完美解决啊，原以为在textDidChange回调方法中也用resignFirstResponder就可以了，其实在当我们点击clear调用textDidChange的时候，searchBar还没有变成first responder第一响应者，所以又何来取消呢，只能另辟蹊径了。&lt;/p&gt;
-
-&lt;p&gt;```
-@interface SearchViewController : UIViewController &lt;uisearchbardelegate&gt; {
-    // all of our ivar declarations go here...
-    BOOL shouldBeginEditing;
-    ....
-}&lt;/uisearchbardelegate&gt;&lt;/p&gt;
-
-&lt;p&gt;…
-@end&lt;/p&gt;
-
-&lt;p&gt;@implementation SearchViewController
-…
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        …
-        shouldBeginEditing = YES;
-    }
-}
-…
-@end
-Later on, in the UISearchBarDelegate, we implement the searchBar:textDidChange: and searchBarShouldBeginEditing: methods:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;(void)searchBar:(UISearchBar *)bar textDidChange:(NSString *)searchText {
-  NSLog(@”searchBar:textDidChange: isFirstResponder: %i”, [self.searchBar isFirstResponder]);
-  if(![searchBar isFirstResponder]) {
-      // user tapped the ‘clear’ button
-      shouldBeginEditing = NO;
-      // do whatever I want to happen when the user clears the search…
-  }
-}&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;(BOOL)searchBarShouldBeginEditing:(UISearchBar *)bar {
-  // reset the shouldBeginEditing BOOL ivar to YES, but first take its value and use it to return it from the method call
-  BOOL boolToReturn = shouldBeginEditing;
-  shouldBeginEditing = YES;
-  return boolToReturn;
-}&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 15 Aug 2015 13:53:58 +0800</pubDate>
-        <link>http://yourdomain.com/2015/08/15/8yue-15hao.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/08/15/8yue-15hao.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>8月12</title>
-        <description>&lt;p&gt;最近项目也没有什么新的需求，就在做一些查漏补缺的地方，着重是在看一些动画方面的好事例，可以应用到求攻略上面的，顺便学习、实践一下，code4app网站上还是有不少的好代码，不过很多在Github上也有提供链接。&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;因为最近看的代码也是多的，感触也是大家的代码都写的好干净的，不过也存在因为展示事例简单的原因吧，这里补充一点UITableView上的属性，之前没有接触到过，现在想想也是厉害的：&lt;/p&gt;
-
-&lt;p&gt;一、cell计算高度补充&lt;/p&gt;
-
-&lt;p&gt;这样能自动的进行cell高度的适配不用特地计算了&lt;/p&gt;
-
-&lt;p&gt;```
-// 经过测试，实际表现及运行效率均相似，大👍
-tableView.estimatedRowHeight = 80
-tableView.rowHeight = UITableViewAutomaticDimension&lt;/p&gt;
-
-&lt;p&gt;```
-以上是一个小点的补充，实际应用中如果涉及到UILabel不要忘了设置lineNume哦。&lt;/p&gt;
-
-&lt;p&gt;二、像素化&lt;/p&gt;
-
-&lt;p&gt;下面总结一下我在练习动画的时候一直比较困惑的地方吧，一开始在学习layer的时候，多处都讲到了关于像素的问题，有的时候会出现一些锯齿，这里分情况可以用两种方式来解决一下：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;contentsScale :layer是可以填充content的，必将常用是添加个图片什么的，当没有设置frame的时候，没有很好的使content适应图层的情况下，图片是很有可能出现放大，出现锯齿的情况的，这样就要设置好像素值［UISreen main］.scale。根据屏幕的像素来绘制图片内容。&lt;/li&gt;
-  &lt;li&gt;shouldRasterize :我是翻译成“栅格化”的，在使用shouldRasterize的时候一定要配合使用rasterizationScale，以防止出现Retina屏幕像素化的问题。&lt;/li&gt;
-  &lt;li&gt;rasterizationScale :我现在也只有在处理组合透明度动画的时候才用到，作用是图层及其子图层都会被整合成一个整体的图片，解决重叠透明图层的混合失灵问题。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;三、消息传递方法&lt;/p&gt;
-
-&lt;p&gt;之前在看动画的时候，看到了一段代码，能代替计时器不断的调用方法,将该段代码写在方法体内，就能起到不断调用，直到终止动作：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-//_cmd是隐藏的参数，代表当前方法的selector
-[self performSelector:_cmd withObject:aLayer afterDelay:0.05];
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;四、动画误区&lt;/p&gt;
-
-&lt;p&gt;在学习动画基础属性的时候做的例子可能迟钝的我发现不了这个点，但是当我试图将其应用到求攻略上时总是出现一些意想不到的问题，比如，当我在处理点赞动作的时候，希望能呈现心心能由大缩放到位置上，但是在动画结束后，心心的大小不是我设置的tovalue的0.5倍，而是原始大小，之前不论是直接在uiview上做动画还是用第三方“Pop”做动画，toValue都是最终的状态，但是在layer上做动画，发现其实一切都是浮云，动画就只是动画，不会对对象产生影响，所以要做最后需要“移除”的动作的，我们可以在创建layer的时候就设置opacity＝0,通过动画的frameValue和toValue来做动画，最终动画完成后layer还是隐藏的。&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 12 Aug 2015 15:48:21 +0800</pubDate>
-        <link>http://yourdomain.com/2015/08/12/8yue-12.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/08/12/8yue-12.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>8月6日</title>
-        <description>&lt;p&gt;上周项目开展的貌似很顺利啊，由师傅进入最后收尾工作了，因为我们分攻略要上的很多，相应等待的时间将长，这段时间就要抓紧时间查漏补缺了，可以在工作时间学习自己短期的部分。&lt;/p&gt;
-
-&lt;p&gt;不过作为一个“幼龄”的程序员，当运营同事来提应用bug的时候真的是心都悬起来啦啊，特别实在上线前夕，有一件事戳中笑点呢：某年某月某日，运营同事走到技术开发区进行谈话时，一瞥见是android机，瞬间松了一口气啊，是不是，有木有!&lt;/p&gt;
-
-&lt;p&gt;我就趁着该段时间，能学的学，能看的看，能问的问，这次花了点时间看了一点layer动画方面的东西，就像vivian(产品经理)说的现在app展示还是比较死的，如果能多增加点动画，生动点就好了，我也是在code4app网站上在找资源的时候突然想多找点动画相关的，看起来多炫啊， 这里可以推荐一个网站啊，我感觉写的很干净啊，也是相对较浅的，稍微设计一点数学线性方面的知识吧，和动画打交道难免的&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-http://zsisme.gitbooks.io
-&lt;/code&gt;
-多看看，多敲敲。&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;近期工作有段时间了，工作在上手顺利的同时我也会偶尔学习点新的东西，“装饰”一下自己嘛，毕竟现在学习东西，不像学校里面还有考试什么的，能强逼你要达到什么样的学习成果，学习进度难免拖拉了，这边我针对自身的情况，进行学习规划：&lt;/p&gt;
-
-&lt;p&gt;1.&lt;strong&gt;&lt;em&gt;php&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;之前对后台都很感兴趣的，记得后台处理起来自由一点，不像客户端上线后出bug是一件减寿命的事情啊，之前只有在做毕设的时候弄过一点C#的后台，但真心不熟，不过介于大学的最终意义：大学就是大致学学的最终定义，后台数据库通用的数据库语言和操作还是有印象的，至少在看PHP代码学习的时候不会因为这个搓手搓脚，这边我学习的一般流程是：&lt;/p&gt;
-
-&lt;p&gt;方法一、顺了一遍php的语法，看到不理解的，翻阅一下PHP的手册&lt;/p&gt;
-
-&lt;p&gt;方法二、项目中有新的需求或者需求改动导致的接口调整，我如果有时间就着急先写一遍php,在本地先测试一下，但基本原则是：绝对不提交，这个可关系重大呢，在自己写的时候就会发现一些在过php的语法手册的时候被自己忽略或者带过的内容，在实际操作中会出现各种各样的问题和疑问，自己觉得OK了，后台的“正规”程序员写好后，push下来对比一下代码，看一下差距，到现在我也只写了一两个方法，发现如果是在旧需求上添加的时候，我写接口，有的条件考虑不全，没有很仔细的检查各个表之间的结构，说到底就是还不够严谨。&lt;/p&gt;
-
-&lt;p&gt;2.&lt;strong&gt;&lt;em&gt;swift&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;近期不是在code4app上活着github上找资源的时候会特地找swift相关的炫酷的效果资源来看，可以从简单的开始，UITabelView什么的，跟着敲，敲的时候就会发现很多变化，就像swift中很重要的“”可选
-的概念，近期我跟了一个用swift写的UITabelView和卡片动画的滑动效果范例，总结一下我在操作可选符号（？、！）要注意的地方&lt;/p&gt;
-
-&lt;p&gt;1.当可选对象用！描述，并赋值的时候，已经自动解包了，可以查看类型，已经不是Option类型了，如果还是用？，则row的类型还是option&lt;/p&gt;
-
-&lt;p&gt;var row = self.items!.count;&lt;/p&gt;
-
-&lt;p&gt;2.由上所说，如下例子，当创建变量并显示说明类型的时候，使用的是！符号，是隐式可选类型，说明tableview变量不是可选的，在之后使用到tableview的地方不用再进行解析了，直接使用值就可以了，因为tableview是一定有值的。&lt;/p&gt;
-
-&lt;p&gt;var tableview:UITableView!&lt;/p&gt;
-
-&lt;p&gt;3.不能使用可选链为属性赋值&lt;/p&gt;
-
-&lt;p&gt;self.leftButton!.tag = 100&lt;/p&gt;
-
-&lt;p&gt;4.用可选值调用方法可以表示是否调用成功&lt;/p&gt;
-
-&lt;p&gt;self.tableView?.setEditing(false, animated: true)&lt;/p&gt;
-
-&lt;p&gt;如果把范例代码整片敲下来，理解了的话，可以把swift试着自己写成object-c,这样做比较有效率。&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 06 Aug 2015 15:36:59 +0800</pubDate>
-        <link>http://yourdomain.com/2015/08/06/8yue-6ri.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/08/06/8yue-6ri.html</guid>
         
         
       </item>
