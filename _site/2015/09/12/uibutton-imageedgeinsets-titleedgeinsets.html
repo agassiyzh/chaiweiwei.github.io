@@ -68,13 +68,12 @@
 
 <p>我在修设计效果的时候，重新思考了怎么实现图片和文字的组合展示效果，之前看到有关联的左图片与右问题的时候，一定使用UIButton系统提供的image和title来实现，当看到右图片、左文字<img src="../images/more_icon.png" alt="setting" />的时候心里还是有点小犹豫的，每次用ImageEdgeInsets或者TitleEdgeInsets属性的时候位置都不正确，我通常都是用最笨的办法，将image独立出来，再做一个UIImageView，这次有时间就好好的搜了一下这个解决方案，其实还是我UIEdgeInsetsMake的时候没有算好，总是差image的一个宽度。下面是能实现效果的一个方案：</p>
 
-<p>```
- //图片20px 20px
-CGSize size = [self.MoreButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0f]}];</p>
-
-<p>[self.MoreButton setImageEdgeInsets:UIEdgeInsetsMake(0, size.width, 0, -size.width)];
+<p><code>
+//图片20px 20px
+CGSize size = [self.MoreButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0f]}];
+[self.MoreButton setImageEdgeInsets:UIEdgeInsetsMake(0, size.width, 0, -size.width)];
 [self.MoreButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 20)];
-```</p>
+</code></p>
 
 <p>其实一开始我脑子里面的结构变化一定是这样的：</p>
 
